@@ -118,12 +118,54 @@ header {
     color: var(--negro);
     text-transform: capitalize; 
     flex: 1;
+    -webkit-tap-highlight-color: transparent; 
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
 }
 
 .texto:hover {
     color: var(--tercero);
     font-size: 2rem;
     transition: font-size 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 3.2rem;
+        margin-block-start: 0.4em;
+        margin-block-end: 0.4em;
+    }
+
+    .contenedor-indice {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .imagen-responsive2 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .indice {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .numero {
+        font-size: 2.4rem;
+        min-width: 45px;
+    }
+
+    .texto {
+        font-size: 1.6rem;
+    }
+
+    .texto:hover {
+        font-size: 1.8rem;
+    }
 }
 
 /*Footer*/
