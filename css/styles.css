@@ -1,0 +1,107 @@
+:root {
+    --primero: #ead4f8;
+    --segundo: #e9d9f3;
+    --tercero: #51008b;
+    --cuarto: #a435f6 ;
+
+    --negro: #232323 ;
+    --blanco: #f3f3f3;
+    --fuente1: "Poppins", sans-serif;
+    --fuente2: "DM Serif Display", serif;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Ayuda Box model */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente2);
+    background-color: var(--blanco) ; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: var(--primero);
+    color: var(--negro);
+    font-size: x-large;
+    text-align: center;
+    padding: 10px;
+}
+
+.imagen-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor-indice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanco);
+}   
+
+.imagen-responsive2 {
+    margin-right: auto;
+    float: left;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*Indice del sitio*/
+.indice {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #000;
+    background-color: var(--segundo);
+    padding: 0px 20px 0px 20px;
+    box-sizing: border-box;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000; /* Línea divisoria */
+    padding: 10px 0;
+}
+
+.item:last-child {
+    border-bottom: none; /* Sin línea en el último elemento */
+}
+
+.numero {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000; /* Negro */
+}
+
+.texto {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000; /* Negro */
+    text-transform: capitalize; /* Mayúsculas en primeras letras */
+}
+
+/*Footer*/
+.footer {
+    background-color: var(--primero);
+    color: var(--negro);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    font-size: small;
+    font-weight: 700;
+}
