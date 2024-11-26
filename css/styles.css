@@ -43,6 +43,11 @@ header {
     display: block;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
+    -webkit-tap-highlight-color: transparent; 
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
 }   
 
 .imagen-responsive {
