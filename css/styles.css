@@ -13,7 +13,7 @@
 /* Globales */
 html {
     font-size: 62.5%;
-    box-sizing: border-box; /* Ayuda Box model */
+    box-sizing: border-box;
 }
 
 *, *:before, *:after {
@@ -50,9 +50,17 @@ header {
     -ms-user-select: none; 
 }   
 
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
 .imagen-responsive {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .contenedor-indice {
@@ -62,6 +70,8 @@ header {
     align-items: center;
     padding: 40px;
     gap: 0;
+    position: relative;
+    z-index: 1;
 }   
 
 .imagen-responsive2 {
@@ -146,17 +156,32 @@ header {
     .contenedor-indice {
         flex-direction: column;
         padding: 20px;
+        scroll-snap-type: y mandatory; 
+        overflow-y: auto;
+        min-height: calc(100vh - 200px);
+        position: relative;
+        z-index: 1;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .contenedor-indice::-webkit-scrollbar {
+        display: none;
     }
 
     .imagen-responsive2 {
         width: 100%;
         margin-right: 0;
         margin-bottom: 30px;
+        scroll-snap-align: start;
     }
 
     .indice {
         width: 100%;
         max-width: 100%;
+        scroll-snap-align: start;
+        flex-shrink: 0;
     }
 
     .numero {
